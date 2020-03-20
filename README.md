@@ -1,2 +1,0 @@
-# Database
-Oracle SQL / DBMS
