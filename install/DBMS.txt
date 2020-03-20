@@ -1,0 +1,39 @@
+
+ + DBMS, DataBase Management System
+
+ - 데이터베이스 관리 시스템
+
+ - Oracle DB, MS-SQL, MySql, MongDB, SQLite 등등
+
+
+
+
+ + 데이터베이스 , Database , DB
+ - 데이터 저장소
+ 
+ - 체계적인 데이터의 모음
+
+ - 여러 클라이언트 ( 사람, 프로그램 등 ) 들이 데이터를 공유하면서 사용할 목적으로
+ 관리되는 통합 정보 시스템
+
+ - 데이터베이스 내에 테이블들을 생성하여 데이터를 관리한다
+
+
+ - 우리는 오라클 DB를 사용
+
+	버전 : Oracle DB 11g Release 2
+	제품군 : Express Edition
+	( Standard Edition, Standard One Edition, Enterprise Edition )
+	
+	** 오라클 DB Express Edition(XE) 에는 DB가 한 개만 존재한다.
+	** SID : xe( DB이름 )
+
+	** Standard Edition 도 DB가 한 개만 존재한다
+	** SID : orcl ( DB이름 )
+
+	** Enterise Edition 은 DB를 여러 개 생성할 수 있음
+
+
+
+
+
