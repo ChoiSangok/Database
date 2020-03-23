@@ -1,0 +1,78 @@
++ 연산자
+
+ - 비교 ( 관계 ) 연산자
+
+	=	같다
+	!=	같지않다 ( <> ^= )
+
+	<	작다
+	>	크다
+
+	<=	작거나 같다
+	>=	크거나 같다
+
+
+ - 논리 연산자
+ 	AND	두 조건이 모두 만족 할 때 TRUE
+	OR	두 조건 중 하나라도 만족할 때 TRUE
+	NOT	논리 부정
+
+
+ - 기타연산자
+	
+	BETWEEN a AND b
+		a 와 b 사이의 데이터 (a,b 포함 )
+
+		ex )	deptno BETWEEN 10 AND 20 
+
+		ex ) 	sal BETWEEN 1000 AND 3000
+
+		
+		부정문 NOT BETWEEN a AND b
+
+	IN( list )
+		list 에 해당하는 값 중 하나라도 일치한다면 TRUE
+
+		ex )	deptno IN( 10, 20 )
+			(deptno = 10 OR deptno = 20 ) 
+
+		부정문 NOT IN( list )
+
+	LIKE
+		지정된 형식의 문자열 포맷( 서식 ) 으로 일치하는 조건
+	
+		% : 여러 개의 문자, 또는 문자가 없는 경우
+		_ : 단일문자, 반드시 한 글자가 존재해야 함
+		
+		ex )	ename LIKE 'B%' - B로 시작하는 모든 문자열 
+		ex ) 	ename LIKE '%B%' - B를 포함하는 모든 문자열
+		ex ) 	ename LIKE '_B%' - 두 번째 문자가 B인 모든 문자열
+		ex ) 	ename LIKE '%B' - B로 끝나는 모든 문자열 
+ 	
+		부정문 NOT LIKE
+
+
+	IS NULL
+		컬럼의 값이 NULL인지 검사하는 연산자
+		ex)	WHERE mgr IS NULL
+		
+	** 테이블의 데이터 중 ( null ) 값은 데이터가 없음을 나타낸다
+	** WHERE mgr =null 형식으로 저건식을 사용하면 데이터가 존재하지 않는 공간과 
+						null 데이터를 비교하는 구문이된다
+		-> 데이터가없는 공간은 아에 검색대상에서 제외
+
+
+		부정문 IS NOT NULL
+
+
+
+ - DB 탐색 ( 조회 ) 방법, SCAN
+
+ - 풀 스캔, Full Scan
+	테이블의 처음부터 끝까지 전부 탐색하는 방법
+
+
+ - 인덱스 스캔, Index Scan
+	인덱스를 우선 조회하고 인덱스에 연결된 행을 찾아가는 탐색 방법
+
+ ** 인덱스 스캔으로 탐색되지 않으면 풀 스캔한다
