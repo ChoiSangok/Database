@@ -1,0 +1,39 @@
++ SELECT 구문 - DML
+ - 테이블에 저장된 데이터를 조회할 때 사용하는 명령어
+
+ - 반드시 FROM 전이 뒤에 따라 와야함
+
+ + 구문형식
+
+ - SELECT * FROM tablename;
+	테이블의 모든컬럼을 이용해서 전체 데이터을 조회한다
+	
+ - SELECT co1, col2 , ..., FROM tablename;
+	지정된 컬럼만 조회한다
+
+ - SELECT col1 AS alias1 , col2 AS alias2,... FROM tablename;
+	AS 키워드를 생락하고 띄어쓰기만 잘 구분하면 별칭이 된다
+
+ + FROM 절
+ - 조회대상을 지정하는 절
+
+ - 테이블 TABLE
+ - 뷰 VIEW
+ - 인라인 뷰 Inline View, 서브쿼리
+
+ + WHERE 절
+ - 조건절 
+
+ - 조건에 만족하는 데이터(행) 만 처리하도록 설정한다
+
+ - SELECT , UPDATE, DELETE 구문에서 많이 사용된다
+
+ - WHERE [조건절]
+	
+	조건절 :  컬럼명 연산자 조건값 의 형태로 작성한다
+
+	ex) WHERE job = 'SALESMAN'
+
+	ex) WHERE ename = 'SMITH'
+
+	ex) WHERE empno = 7782
