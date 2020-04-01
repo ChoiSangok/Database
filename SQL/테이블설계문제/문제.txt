@@ -1,0 +1,129 @@
+	+ + + TABLE + + +
+	userTb	회원
+
+	+ + + COLUMNS + + +
+	userno	회원번호
+	userid	회원아이디
+	userpw	회원비밀번호
+	gender	성별
+	email	이메일
+	phone	전화번호
+	grade	등급코드
+	report	신고코드
+
+	** userno, grade, report는 NUBMER
+	** 나머지는 모두 VARCHAR2( 크기는 적당히 )
+
+	** PK - userno
+
+	** FK - grade, report
+
+	** gender, email, phone - null 허용
+  
+  
+  -----------------------------------------------------------------------------
+  
+  
+  	+ + + TABLE + + +
+	grade	회원등급
+
+	+ + + COLUMNS + + +
+	grade	등급코드
+	gradename	등급명
+
+	** grade - NUBMER
+	** 나머지 - VARCHAR2( 크기는 적당히 )
+
+	** PK - grade
+  
+  
+    -----------------------------------------------------------------------------
+  
+  
+  	+ + + TABLE + + +
+	report	회원신고
+
+	+ + + COLUMNS + + +
+	report	신고코드
+	report_dat	신고일
+	report_reason	신고사유
+
+	** PK - report
+  
+  
+    -----------------------------------------------------------------------------
+    
+    
+  	+ + + TABLE + + +
+	board_cate	게시판 종류
+
+	+ + + COLUMNS + + +
+	cateno	게시판코드
+	cate_name	게시판이름
+	cate_dat	게시판등록일
+
+	** PK - cate
+  
+  
+    -----------------------------------------------------------------------------
+    
+    
+  	+ + + TABLE + + +
+	board	게시판
+
+	+ + + COLUMNS + + +
+	boardno	게시글코드	(PK)
+	cateno	게시판코드	(FK)
+	title	글제목
+	content	글내용
+	insert_dat	작성일
+	update_dat	수정일
+	hit	조회수
+	has_file	첨부파일 유무
+	userno	작성자	(FK)
+
+	** hit - NUMBER
+	** has_file - VARCHAR2(1) : n(없음) y(있음) 로 구분할 예정
+  
+  
+  
+    -----------------------------------------------------------------------------
+  
+  
+  	+ + + TABLE + + +
+	filetb	첨부파일
+
+	+ + + COLUMNS + + +
+	fileno	파일번호	(PK)
+	boardno	게시글코드	(FK)
+	filename	파일이름
+	filepath	파일저장경로
+	filesize	파일크기
+	filetype	파일타입
+
+	** filesize - NUMBER
+
+	** filesize, filetype - NULL 허용
+  
+  
+    -----------------------------------------------------------------------------
+    
+    
+  	+ + + TABLE + + +
+	commenttb	댓글
+
+	+ + + COLUMNS + + +
+	commentno	댓글번호	(PK)
+	boardno	게시글코드	(FK)
+	userno	댓글작성자	(FK)
+	content	댓글내용
+	insert_dat	작성일
+
+	** content - null 허용
+  
+  
+    -----------------------------------------------------------------------------
+
+  
+  
+  
