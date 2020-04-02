@@ -1,0 +1,20 @@
+	1.
+	MyBoard Table 생성
+	  boardno NUMBER, title VARCHAR2(300)
+
+	SEQ_MyBoard Sequence 생성
+
+	2.
+	AttachFile Table 생성
+	  fileno NUMBER, boardno NUMBER, filename VARCHAR2(200)
+
+	SEQ_AttachFile Sequence 생성
+
+	3. 
+	MyBoard TB에 게시글 INSERT
+	AttachFile TB에 첨부파일 INSERT
+
+	게시글제목 : 안녕하세요
+	첨부파일명 : Hello.jpg
+
+	** 게시글과 첨부파일이 관계를 가지도록 PK,FK를 적절히 설정
